@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script>
+  const redirect = sessionStorage.getItem("redirect");
+
+  if (redirect) {
+    sessionStorage.removeItem("redirect");
+    window.history.replaceState(
+      null,
+      null,
+      "/worldwise_React" + redirect
+    );
+  }
+</script>
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="icon.png" />

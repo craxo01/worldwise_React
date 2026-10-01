@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorldWise</title>
+
+    <script>
+      const path = window.location.pathname;
+      const repo = "/worldwise_React";
+
+      if (path.startsWith(repo)) {
+        const route = path.slice(repo.length);
+
+        sessionStorage.setItem(
+          "redirect",
+          route + window.location.search + window.location.hash
+        );
+      }
+    </script>
+  </head>
+
+  <body>
+    <script>
+      window.location.replace("/worldwise_React/");
+    </script>
+  </body>
+</html>
