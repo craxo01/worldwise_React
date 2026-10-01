@@ -32,7 +32,7 @@ function App() {
   return (
     <AuthProvider>
       <CitiesProvider>
-        <BrowserRouter>
+        <BrowserRouter  basename="/worldwise_React">
           <Suspense fallback={<SpinnerFullPage />}>
             <Routes>
               <Route index element={<Homepage />} />
